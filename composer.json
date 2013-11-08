@@ -2,5 +2,8 @@
   "name": "nterchange_pear",
   "description": "PEAR library dependencies for nterchange",
   "version": "0.0.2",
-  "include-path": ["./"]
+  "include-path": ["./"],
+  "autoload": {
+    "classmap": ["./"]
+  }
 }
