@@ -562,7 +562,7 @@ class Auth {
         if ((empty($this->username) || !$login_ok) && $this->showLogin) {
             $this->log('Rendering Login Form.', AUTH_LOG_INFO);
             if (is_callable($this->loginFunction)) {
-                $this->log('Calling loginFunction ('.$this->loginFunction.').', AUTH_LOG_DEBUG);
+                // $this->log('Calling loginFunction ('.$this->loginFunction.').', AUTH_LOG_DEBUG);
                 call_user_func_array($this->loginFunction, array($this->username, $this->status, &$this));
             } else {
                 // BC fix Auth used to use drawLogin for this
